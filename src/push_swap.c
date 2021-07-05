@@ -6,22 +6,11 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:17 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 13:34:35 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:38:02 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-void	ft_printlist(t_list *lst)
-{
-	int *nb;
-	while (lst)
-	{
-		nb = lst->content;
-		printf("%d\n", *nb);
-		lst = lst->next;
-	}
-}
 
 void	ft_printlst(t_list *lst)
 {

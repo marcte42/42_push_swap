@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:51:57 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 14:00:40 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:36:20 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	opposite_direction_sort(t_ps *ps, int a_index, int b_index)
 
 	rra_i = ft_lstsize(ps->a_lst) - a_index;
 	rrb_i = ft_lstsize(ps->b_lst) - b_index;
-	if (b_index + rra <= a_index + rrb)
+	if (b_index + rra_i <= a_index + rrb_i)
 	{
 		while (b_index--)
 			rb(ps);
@@ -106,10 +106,9 @@ void	optimal_solution(t_ps *ps)
 	relative_index = get_node_index(ps->a_lst, relative_node);
 	if (eval_same_dirrection(ps, relative_index, optimal_index)
 		<= eval_opposite_dirrection(ps, relative_index, optimal_index))
-		{
-			same_direction_sort(ps, relative_index, optimal_index);
-		}
-		
+	{
+		same_direction_sort(ps, relative_index, optimal_index);
+	}
 	else
 	{
 		opposite_direction_sort(ps, relative_index, optimal_index);

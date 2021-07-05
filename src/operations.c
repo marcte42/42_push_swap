@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 14:02:52 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 14:54:22 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,22 +116,37 @@ void	rb(t_ps *ps)
 	ft_lstadd_back(&ps->op_lst, node);
 }
 
-void	rr(t_ps *ps)
+void	rotate_a(t_ps *ps)
 {
 	t_list	*tmp;
-	char	*opcode;
-	t_list	*node;
 
-	if (!ps->a_lst->next || !ps->b_lst->next)
+	if (!ps->a_lst->next)
 		return ;
 	tmp = ps->a_lst;
 	ps->a_lst = ps->a_lst->next;
 	tmp->next = NULL;
 	ft_lstlast(ps->a_lst)->next = tmp;
+}
+
+void	rotate_b(t_ps *ps)
+{
+	t_list	*tmp;
+
+	if (!ps->b_lst->next)
+		return ;
 	tmp = ps->b_lst;
 	ps->b_lst = ps->b_lst->next;
 	tmp->next = NULL;
-	ft_lstlast(ps->a_lst)->next = tmp;
+	ft_lstlast(ps->b_lst)->next = tmp;
+}
+
+void	rr(t_ps *ps)
+{
+	char	*opcode;
+	t_list	*node;
+
+	rotate_a(ps);
+	rotate_b(ps);
 	opcode = ft_strdup("rr");
 	if (!opcode)
 		exit_routine("Malloc failed", ps);
@@ -195,14 +210,12 @@ void	rrb(t_ps *ps)
 	ft_lstadd_back(&ps->op_lst, node);
 }
 
-void	rrr(t_ps *ps)
+void	reverserotate_a(t_ps *ps)
 {
 	t_list	*tmp;
 	t_list	*tmp_list;
-	char	*opcode;
-	t_list	*node;
 
-	if (!ps->a_lst->next || !ps->b_lst->next)
+	if (!ps->a_lst->next)
 		return ;
 	tmp_list = ps->a_lst;
 	while (tmp_list->next)
@@ -213,6 +226,15 @@ void	rrr(t_ps *ps)
 	ft_lstlast(ps->a_lst)->next = ps->a_lst;
 	ps->a_lst = tmp->next;
 	tmp->next = NULL;
+}
+
+void	reverserotate_b(t_ps *ps)
+{
+	t_list	*tmp;
+	t_list	*tmp_list;
+
+	if (!ps->b_lst->next)
+		return ;
 	tmp_list = ps->b_lst;
 	while (tmp_list->next)
 	{
@@ -222,6 +244,15 @@ void	rrr(t_ps *ps)
 	ft_lstlast(ps->b_lst)->next = ps->b_lst;
 	ps->b_lst = tmp->next;
 	tmp->next = NULL;
+}
+
+void	rrr(t_ps *ps)
+{
+	char	*opcode;
+	t_list	*node;
+	
+	reverserotate_a(ps);
+	reverserotate_b(ps);
 	opcode = ft_strdup("rrr");
 	if (!opcode)
 		exit_routine("Malloc failed", ps);
