@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 18:05:12 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 18:56:06 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 18:56:39 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ int	main(int ac, char **av)
 	if (ac == 1)
 		return (0);
 	ft_bzero(&ps, sizeof(ps));
-	print_list(ps.a_lst);
 	if (!tab_to_list(&ps.a_lst, &av[1], ac - 1))
 		exit_routine("Error", &ps);
 	while (get_next_line(0, &opcode))
