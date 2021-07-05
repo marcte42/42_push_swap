@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:09 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 19:00:26 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:02:54 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void			pa(t_ps *ps);
 void			pb(t_ps *ps);
 void			sa(t_ps *ps);
 void			sb(t_ps *ps);
+void			ss(t_ps *ps);
 void			ra(t_ps *ps);
 void			rb(t_ps *ps);
 void			rr(t_ps *ps);

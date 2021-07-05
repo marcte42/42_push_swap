@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 18:05:12 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 19:01:20 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:02:39 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	process_ops(char *opcode, t_ps *ps)
 		sa(ps);
 	if (ft_strcmp(opcode, "sb") == 0)
 		sb(ps);
+	if (ft_strcmp(opcode, "ss") == 0)
+		ss(ps);
 	else if (ft_strcmp(opcode, "pa") == 0)
 		pa(ps);
 	else if (ft_strcmp(opcode, "pb") == 0)
