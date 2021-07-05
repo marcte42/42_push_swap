@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:03:41 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:45:34 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:55:22 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	exit_routine(char *err, t_ps *ps)
 	ft_lstfree(ps->op_lst);
 	if (err)
 	{
-        ft_putstr_fd(err, 0);
-        ft_putstr_fd("\n", 0);
+		ft_putstr_fd(err, 0);
+		ft_putstr_fd("\n", 0);
 		exit(1);
 	}
 	exit(0);
