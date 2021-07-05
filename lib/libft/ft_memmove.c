@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 10:10:25 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:22:51 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:06:06 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	*ft_memcpyrev(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-void		*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (dst > src)
 		ft_memcpyrev(dst, src, len);

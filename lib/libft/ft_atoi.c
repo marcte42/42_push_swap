@@ -6,17 +6,17 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 16:07:49 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/10/03 17:24:51 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:03:33 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int res;
-	int sign;
-	int i;
+	int	res;
+	int	sign;
+	int	i;
 
 	i = 0;
 	while (ft_isspace(str[i]))

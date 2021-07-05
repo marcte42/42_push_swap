@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 12:44:45 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/10/14 21:35:45 by marc             ###   ########.fr       */
+/*   Updated: 2021/07/05 16:03:50 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t i;
+	size_t	i;
 
 	i = -1;
 	while (src[++i])

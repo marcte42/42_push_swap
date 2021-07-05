@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 17:37:54 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/10/13 12:12:11 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:04:14 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *dest, int c, size_t len)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
 
 	ptr = dest;
 	while (len--)

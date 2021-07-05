@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 22:40:05 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:34:37 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:02:59 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_getlen(const char *s1, const char *set)
 	return (j - i + 1);
 }
 
-char		*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	int		len;
 	int		i;
@@ -45,9 +45,11 @@ char		*ft_strtrim(const char *s1, const char *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	if ((len = ft_getlen(s1, set)) <= 0)
+	len = ft_getlen(s1, set);
+	if (len <= 0)
 		len = 0;
-	if (!(str = (char *)malloc((len + 1) * sizeof(char))))
+	str = (char *)malloc((len + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
 	while (ft_isinset(*s1, set))
 		s1++;

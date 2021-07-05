@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 17:13:38 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 14:03:30 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:40:47 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ void	sort_5(t_ps *ps)
 {
 	int		size;
 
-	size = ft_lstsize(ps->a_lst);
 	if (is_cycle_sorted(ps->a_lst))
 	{
 		smallest_to_top(ps, &ps->a_lst);
 		return ;
 	}
+    size = ft_lstsize(ps->a_lst);
 	while (size-- > 3)
 	{
 		smallest_to_top(ps, &ps->a_lst);
@@ -95,6 +95,11 @@ void	sort(t_ps *ps)
 {
 	int		i;
 
+    if (is_cycle_sorted(ps->a_lst))
+	{
+		smallest_to_top(ps, &ps->a_lst);
+		return ;
+	}
 	i = ft_lstsize(ps->a_lst);
 	while (i-- > 3)
 		pb(ps);

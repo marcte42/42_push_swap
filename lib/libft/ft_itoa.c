@@ -6,15 +6,15 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 11:28:25 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 14:52:09 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:53:33 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen(int n)
+int	ft_intlen(int n)
 {
-	int i;
+	int	i;
 
 	if (!n)
 		return (1);
@@ -40,7 +40,8 @@ char	*ft_itoa(int n)
 		len++;
 		nbr = -n;
 	}
-	if (!(tab = (char *)malloc((len + 1) * sizeof(char))))
+	tab = (char *)malloc((len + 1) * sizeof(char));
+	if (!tab)
 		return (NULL);
 	tab[0] = '0';
 	tab[len--] = 0;

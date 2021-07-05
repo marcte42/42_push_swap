@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:29:31 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 13:47:31 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:06:15 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	while (lst && *lst)
 	{

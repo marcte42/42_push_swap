@@ -6,16 +6,16 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 21:28:10 by marc              #+#    #+#             */
-/*   Updated: 2020/11/02 14:41:53 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:00:50 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t len;
+	size_t	i;
+	size_t	len;
 
 	if (!dst || !src)
 		return (0);

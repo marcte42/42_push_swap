@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 22:12:30 by marc              #+#    #+#             */
-/*   Updated: 2021/05/23 09:54:00 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:07:18 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -49,7 +49,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *haystack,
-							const char *needle, size_t len);
+					const char *needle, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 char			*ft_strdup(const char *s1);
@@ -75,7 +75,7 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-										void (*del)(void *));
+					void (*del)(void *));
 t_list			*ft_lstjoin(t_list *a_head, t_list *b_head);
 
 #endif

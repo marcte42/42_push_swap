@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 09:05:56 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/10/13 17:47:38 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:49:52 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
-	if (!(tmp = ft_lstlast(*alst)))
+	tmp = ft_lstlast(*alst);
+	if (!tmp)
 		*alst = new;
 	else
 		tmp->next = new;

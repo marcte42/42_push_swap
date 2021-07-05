@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 19:40:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:24:39 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:55:45 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	ft_word_count(char const *s, char c)
 	return (wc);
 }
 
-char			*ft_strduptosep(const char *s1, char c, size_t *index)
+char	*ft_strduptosep(const char *s1, char c, size_t *index)
 {
 	char	*dst;
 	size_t	i;
@@ -34,7 +34,8 @@ char			*ft_strduptosep(const char *s1, char c, size_t *index)
 	len = 0;
 	while (s1[len] && s1[len] != c)
 		len++;
-	if (!(dst = (char *)malloc((len + 1) * sizeof(char))))
+	dst = (char *)malloc((len + 1) * sizeof(char));
+	if (!dst)
 		return (NULL);
 	i = -1;
 	while (++i < len)
@@ -44,7 +45,7 @@ char			*ft_strduptosep(const char *s1, char c, size_t *index)
 	return (dst);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	wc;
@@ -54,7 +55,8 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	wc = ft_word_count(s, c);
-	if (!(tab = (char **)malloc((wc + 1) * sizeof(char *))))
+	tab = (char **)malloc((wc + 1) * sizeof(char *));
+	if (!tab)
 		return (NULL);
 	j = 0;
 	i = -1;

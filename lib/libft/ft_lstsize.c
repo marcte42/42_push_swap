@@ -6,15 +6,15 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/07 08:55:45 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:33:22 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:00:25 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	if (!lst)
 		return (0);

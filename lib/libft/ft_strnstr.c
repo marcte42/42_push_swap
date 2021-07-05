@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 08:49:48 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:26:28 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:50:59 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	if (!ft_strlen(needle))
 		return ((char *)haystack);

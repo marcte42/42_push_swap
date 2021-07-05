@@ -6,12 +6,12 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 15:03:38 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/05/02 17:26:49 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:47:26 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # include <sys/types.h>
 # include <sys/uio.h>

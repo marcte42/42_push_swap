@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 16:07:49 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/05/20 15:58:28 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:50:25 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long	ft_atol(char *str)
 {
-	long res;
-	int sign;
-	int i;
+	long	res;
+	int		sign;
+	int		i;
 
 	i = 0;
 	while (ft_isspace(str[i]))

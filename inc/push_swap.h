@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:09 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 15:42:54 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:48:07 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "libft.h"
 # include "get_next_line.h"
 
-typedef struct 	s_ps
+typedef struct s_ps
 {
 	t_list		*a_lst;
 	t_list		*b_lst;
@@ -30,11 +30,11 @@ typedef struct 	s_ps
 int				tab_to_list(t_list **head, char **tab, int size);
 void			exit_routine(char *err, t_ps *ps);
 void			sort_3(t_ps *ps);
-void    		sort_5(t_ps *ps);
+void			sort_5(t_ps *ps);
 void			sort(t_ps *ps);
 void			optimal_solution(t_ps *ps);
 
-void			pa(t_ps *ps);\
+void			pa(t_ps *ps);
 void			pb(t_ps *ps);
 void			sa(t_ps *ps);
 void			ra(t_ps *ps);

@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 09:55:09 by mterkhoy          #+#    #+#             */
-/*   Updated: 2020/11/18 15:17:21 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:57:39 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = -1;
 	while (++i < n)
