@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 18:05:12 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 19:08:58 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:16:18 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,13 @@ int	main(int ac, char **av)
 		if (!opcode)
 			break ;
 		if (process_ops(opcode, &ps) == -1)
+		{
+			free(opcode);
 			exit_routine("Error", &ps);
+		}
+		free(opcode);
 	}
+	free(opcode);
 	if (is_list_sorted(ps.a_lst) && ft_lstsize(ps.b_lst) == 0)
 		exit_routine("OK", &ps);
 	else
