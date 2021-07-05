@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 19:06:47 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:07:56 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	swap_b(t_ps *ps)
 	ps->b_lst->next->content = tmp;
 }
 
-void	sb(t_ps *ps)
+void	ss(t_ps *ps)
 {
 	char	*opcode;
 	t_list	*node;
