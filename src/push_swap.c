@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:17 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 15:38:02 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:45:23 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_printlst(t_list *lst)
 {
 	while (lst)
 	{
-		printf("%s\n", (char *)lst->content);
+		ft_putstr_fd((char *)lst->content, 0);
+        ft_putstr_fd("\n", 0);
 		lst = lst->next;
 	}
 }
