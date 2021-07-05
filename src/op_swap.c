@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:54:37 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:00:09 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,26 @@ void	sa(t_ps *ps)
 	ps->a_lst->content = ps->a_lst->next->content;
 	ps->a_lst->next->content = tmp;
 	opcode = ft_strdup("sa");
+	if (!opcode)
+		exit_routine("Error", ps);
+	node = ft_lstnew(opcode);
+	if (!node)
+		exit_routine("Error", ps);
+	ft_lstadd_back(&ps->op_lst, node);
+}
+
+void	sb(t_ps *ps)
+{
+	int		*tmp;
+	char	*opcode;
+	t_list	*node;
+
+	if (!(ps->b_lst) || !ps->b_lst->next)
+		return ;
+	tmp = (ps->b_lst->content);
+	ps->b_lst->content = ps->b_lst->next->content;
+	ps->b_lst->next->content = tmp;
+	opcode = ft_strdup("sb");
 	if (!opcode)
 		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
