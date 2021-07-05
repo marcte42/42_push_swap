@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 15:41:33 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:48:46 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	pa(t_ps *ps)
 	ps->a_lst = tmp;
 	opcode = ft_strdup("pa");
 	if (!opcode)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
 	if (!node)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	ft_lstadd_back(&ps->op_lst, node);
 }
 
@@ -47,9 +47,9 @@ void	pb(t_ps *ps)
 	ps->b_lst = tmp;
 	opcode = ft_strdup("pb");
 	if (!opcode)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
 	if (!node)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	ft_lstadd_back(&ps->op_lst, node);
 }

@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 15:42:09 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:49:35 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	ra(t_ps *ps)
 	ft_lstlast(ps->a_lst)->next = tmp;
 	opcode = ft_strdup("ra");
 	if (!opcode)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
 	if (!node)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	ft_lstadd_back(&ps->op_lst, node);
 }
 
@@ -47,10 +47,10 @@ void	rb(t_ps *ps)
 	ft_lstlast(ps->b_lst)->next = tmp;
 	opcode = ft_strdup("rb");
 	if (!opcode)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
 	if (!node)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	ft_lstadd_back(&ps->op_lst, node);
 }
 
@@ -87,9 +87,9 @@ void	rr(t_ps *ps)
 	rotate_b(ps);
 	opcode = ft_strdup("rr");
 	if (!opcode)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	node = ft_lstnew(opcode);
 	if (!node)
-		exit_routine("Malloc failed", ps);
+		exit_routine("Error", ps);
 	ft_lstadd_back(&ps->op_lst, node);
 }

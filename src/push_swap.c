@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:17 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:45:23 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:49:44 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 		return (0);
 	ft_bzero(&ps, sizeof(ps));
 	if (!tab_to_list(&ps.a_lst, &av[1], ac - 1))
-		exit_routine("Error : Invalid arguments", &ps);
+		exit_routine("Error", &ps);
 	if (ft_lstsize(ps.a_lst) <= 3)
 		sort_3(&ps);
 	else if (ft_lstsize(ps.a_lst) <= 5)
