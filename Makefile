@@ -6,7 +6,7 @@
 #    By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/17 22:01:09 by marc              #+#    #+#              #
-#    Updated: 2021/07/05 12:39:49 by mterkhoy         ###   ########.fr        #
+#    Updated: 2021/07/05 15:43:24 by mterkhoy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,10 @@ SRC_PUSHSWAP =	src/push_swap.c \
 				src/sort_algo.c \
 				src/sort_eval.c \
 				src/sort_helpers.c \
-				src/operations.c
+				src/op_push.c \
+				src/op_swap.c \
+				src/op_rotate.c \
+				src/op_reverse_rotate.c \
 
 OBJ_CHECKER = $(SRC_CHECKER:.c=.o)
 OBJ_PUSHSWAP = $(SRC_PUSHSWAP:.c=.o)

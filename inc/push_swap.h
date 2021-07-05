@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 16:55:09 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 13:34:48 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/05 15:42:54 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ t_list			*get_relative_node(t_list *head_a, t_list *node);
 int				eval(t_ps *ps, t_list *node);
 int				eval_opposite_dirrection(t_ps *ps, int a_index, int b_index);
 int				eval_same_dirrection(t_ps *ps, int a_index, int b_index);
-
-void	ft_printlist(t_list *lst);
 
 /*
 ** Operations
