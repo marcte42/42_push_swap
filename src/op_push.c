@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:48:46 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/11 18:09:02 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	pa(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!(ps->b_lst))
+	if (!ps->b_lst)
 		return ;
 	tmp = ps->b_lst;
 	ps->b_lst = ps->b_lst->next;
@@ -39,7 +39,7 @@ void	pb(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!(ps->a_lst))
+	if (!ps->a_lst)
 		return ;
 	tmp = ps->a_lst;
 	ps->a_lst = ps->a_lst->next;

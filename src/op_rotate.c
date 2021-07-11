@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:49:35 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/11 18:08:11 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ra(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp = ps->a_lst;
 	ps->a_lst = ps->a_lst->next;
@@ -39,7 +39,7 @@ void	rb(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp = ps->b_lst;
 	ps->b_lst = ps->b_lst->next;
@@ -58,7 +58,7 @@ void	rotate_a(t_ps *ps)
 {
 	t_list	*tmp;
 
-	if (!ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp = ps->a_lst;
 	ps->a_lst = ps->a_lst->next;
@@ -70,7 +70,7 @@ void	rotate_b(t_ps *ps)
 {
 	t_list	*tmp;
 
-	if (!ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp = ps->b_lst;
 	ps->b_lst = ps->b_lst->next;

@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 17:49:27 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/11 18:07:41 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	rra(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp_list = ps->a_lst;
 	while (tmp_list->next)
@@ -46,7 +46,7 @@ void	rrb(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp_list = ps->b_lst;
 	while (tmp_list->next)
@@ -71,7 +71,7 @@ void	reverserotate_a(t_ps *ps)
 	t_list	*tmp;
 	t_list	*tmp_list;
 
-	if (!ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp_list = ps->a_lst;
 	while (tmp_list->next)
@@ -89,7 +89,7 @@ void	reverserotate_b(t_ps *ps)
 	t_list	*tmp;
 	t_list	*tmp_list;
 
-	if (!ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp_list = ps->b_lst;
 	while (tmp_list->next)

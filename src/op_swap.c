@@ -6,7 +6,7 @@
 /*   By: mterkhoy <mterkhoy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 18:35:06 by mterkhoy          #+#    #+#             */
-/*   Updated: 2021/07/05 19:07:56 by mterkhoy         ###   ########.fr       */
+/*   Updated: 2021/07/11 18:08:34 by mterkhoy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	sa(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!(ps->a_lst) || !ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp = (ps->a_lst->content);
 	ps->a_lst->content = ps->a_lst->next->content;
@@ -38,7 +38,7 @@ void	sb(t_ps *ps)
 	char	*opcode;
 	t_list	*node;
 
-	if (!(ps->b_lst) || !ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp = (ps->b_lst->content);
 	ps->b_lst->content = ps->b_lst->next->content;
@@ -56,7 +56,7 @@ void	swap_a(t_ps *ps)
 {
 	int		*tmp;
 
-	if (!(ps->a_lst) || !ps->a_lst->next)
+	if (!ps->a_lst || !ps->a_lst->next)
 		return ;
 	tmp = (ps->a_lst->content);
 	ps->a_lst->content = ps->a_lst->next->content;
@@ -67,7 +67,7 @@ void	swap_b(t_ps *ps)
 {
 	int		*tmp;
 
-	if (!(ps->b_lst) || !ps->b_lst->next)
+	if (!ps->b_lst || !ps->b_lst->next)
 		return ;
 	tmp = (ps->b_lst->content);
 	ps->b_lst->content = ps->b_lst->next->content;
